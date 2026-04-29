@@ -1,0 +1,33 @@
+change_id: "<change-id>"
+branch_prefix: "<branch-prefix>"
+manifest:
+  type: "none" # none | mani | custom
+  file: ""
+repos:
+  - name: "<repo-name>"
+    path: "<path>"
+    visibility: "unknown" # public | private | unknown
+    branch: "<branch>"
+    git_preflight:
+      current_branch: ""
+      base_or_target_branch: ""
+      status: "unknown" # clean | dirty | unknown
+      existing_changes: []
+      untracked: []
+      preservation_plan: ""
+    role: "implementation" # contract | implementation | docs | verification
+    depends_on:
+      - repo: "<upstream-repo>"
+        ref: "<commit-sha-or-branch-or-local-artifact>"
+        reason: "<why this ref is required>"
+    parallel_group: ""
+    local_rules:
+      - "AGENTS.md"
+      - "CLAUDE.md"
+    test_commands:
+      - "<command>"
+    pr:
+      base: "main"
+      title: ""
+      body_template: ""
+      related_prs: []

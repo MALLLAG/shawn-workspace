@@ -1,0 +1,43 @@
+# Shawn Workspace — mani 설정
+#
+# AI 에이전트가 전체 시스템 맥락을 파악하며 작업할 수 있도록 요소별 저장소를 통합 관리합니다.
+# 본 파일이 워크스페이스의 단일 source of truth.
+#
+# 사용법: README.md 참조.
+
+shell: bash
+sync_gitignore: true
+
+projects:
+
+  # ───── frontend ─────
+  web-app:
+    path: frontend/web-app
+    url: https://github.com/MALLLAG/web-app.git
+    desc: 사용자 화면을 제공하는 웹 애플리케이션
+    tags: [frontend, react, example]
+
+  # ───── backend ─────
+  user-service:
+    path: backend/user-service
+    url: https://github.com/MALLLAG/user-service.git
+    desc: 사용자 정보를 관리하는 서비스
+    tags: [backend, kotlin, ktor, service, example]
+    env:
+      PORT: "8081"
+
+  catalog-service:
+    path: backend/catalog-service
+    url: https://github.com/MALLLAG/catalog-service.git
+    desc: 상품 정보를 관리하는 서비스
+    tags: [backend, kotlin, ktor, service, example]
+    env:
+      PORT: "8082"
+
+  order-service:
+    path: backend/order-service
+    url: https://github.com/MALLLAG/order-service.git
+    desc: 주문을 처리하는 서비스
+    tags: [backend, kotlin, ktor, service, example]
+    env:
+      PORT: "8083"

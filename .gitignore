@@ -1,0 +1,10 @@
+# Local agent and IDE state
+/.claude/settings.local.json
+/.idea/
+.DS_Store
+
+# Managed mani project worktrees
+/frontend/web-app/
+/backend/user-service/
+/backend/catalog-service/
+/backend/order-service/
