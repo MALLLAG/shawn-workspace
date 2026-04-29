@@ -51,15 +51,6 @@ mani exec --tags backend 'gradle run'
 각 프로젝트의 GitHub URL은 `mani.yaml`의 `url` 필드에 정의되어 있습니다.
 새 환경에서는 `mani sync --parallel`로 4개 저장소를 한 번에 클론할 수 있습니다.
 
-## 서비스 포트
-
-| 서비스 | 기본 포트 | 주요 엔드포인트 |
-|--------|-----------|-----------------|
-| `web-app` | `5173` | React 개발 서버 |
-| `user-service` | `8081` | `GET /health`, `GET /users` |
-| `catalog-service` | `8082` | `GET /health`, `GET /products` |
-| `order-service` | `8083` | `GET /health`, `GET /orders` |
-
 ## 태그 체계
 
 | 태그 | 의미 |
