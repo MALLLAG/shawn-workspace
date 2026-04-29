@@ -1,0 +1,15 @@
+manifest:
+  type: mani
+  file: mani.yaml
+
+commands:
+  list_projects: "mani list projects"
+  show_project: "mani list projects <name>"
+  sync_project: "mani sync --projects <name>"
+  exec_by_tag: "mani exec --tags <tag> --parallel <cmd>"
+  validate_change: "deno run --allow-read .sdd/tools/validate-change.ts <change-id> --stage=plan"
+
+notes:
+  - "mani는 repo discovery, 누락 repo clone, 안전한 bulk status/check 명령에만 사용한다."
+  - "Repo별 build/test 명령은 각 repo root에서 실행한다."
+  - "mani를 설계, 코드 리뷰, PR 판단의 대체물로 사용하지 않는다."
